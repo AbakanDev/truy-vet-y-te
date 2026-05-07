@@ -5,8 +5,12 @@ import com.example.truyvetyte.model.RegisterResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST
+import com.example.truyvetyte.model.HealthResponse
+import retrofit2.http.GET
 
 interface ApiService {
+    @GET("api/health")
+    suspend fun checkHealth(): Response<HealthResponse>
     // Đường dẫn API bạn đã viết bên Express
     @POST("api/auth/register")
     suspend fun registerUser(@Body request: RegisterRequest): Response<RegisterResponse>
