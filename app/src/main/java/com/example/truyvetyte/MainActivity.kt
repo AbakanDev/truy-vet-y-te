@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         val btnLichSu = findViewById<ImageButton>(R.id.btn_history)
         val btnDichTe = findViewById<ImageButton>(R.id.btn_epidemiology)
         val btnKhaiBao = findViewById<ImageButton>(R.id.btn_health_form)
+        val btnKhaiBao2 = findViewById<ImageButton>(R.id.btn_xnc)
         // Trong onCreate, bạn gọi hàm này khi bấm vào các nút ở Bottom Nav
         btnXuHuong.setOnClickListener {
             replaceFragment(XuHuong())
@@ -51,6 +52,9 @@ class MainActivity : AppCompatActivity() {
         }
         btnKhaiBao.setOnClickListener {
             replaceFragment(KhaiBao())
+        }
+        btnKhaiBao2.setOnClickListener {
+            replaceFragment(KhaiBao2())
         }
         // Xử lý khi app vừa mở lên
         handleIntent(intent)
